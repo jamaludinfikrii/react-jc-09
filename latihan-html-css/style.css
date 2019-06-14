@@ -1,0 +1,33 @@
+div{
+    border: 1px red solid
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.kotak1{
+    flex: 3
+}
+
+.kotak2{
+    flex: 1
+}
+
+.container-btn{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.div-bawah{
+    margin-top: 50px;
+    padding: 30px
+}
+
+.x{
+    width: 20px;
+    height: 20px;
+    position: static
+}
