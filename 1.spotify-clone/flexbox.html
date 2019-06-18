@@ -1,0 +1,48 @@
+<style>
+    div{
+     border : 0.5px solid red  
+    }
+    .container{
+      display : flex;
+      flex-direction : row;
+      height : 500px;
+      justify-content :center;
+    }
+    .container div{ 
+      height :30;
+      width : 30;
+    }
+    .satu{
+  
+      order : 1;
+    }
+    .dua {
+     
+      order : -1
+    }
+    .tiga {
+    
+      order : 2
+    }
+    .x{
+      display : inline-block;
+      height : 20;
+      width : 20;
+      text-align : center;
+      border-radius : 20px;
+      position : absolute;
+      top : 5px;
+      right : 5px;
+      
+    }
+  </style>
+  <body>
+    <div class='container'>
+      <div class='satu'>1</div>
+      <div class='dua'>2</div>
+      <div class='tiga'>3</div>
+    </div>
+    <div class='x'>
+      X
+    </div>
+  </body>

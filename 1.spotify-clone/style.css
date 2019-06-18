@@ -14,9 +14,9 @@ body{
 }
 
 
-    /* div{
+    div{
         border: 1px solid orange;
-    } */
+    }
 
 
 /* ================== NAVBAR SECTION ==================== */
@@ -151,4 +151,34 @@ body{
     font-size: 12px;
     color: white;
     text-align: center;
+}
+
+
+
+/* ============== TABLET ============== */
+
+@media only screen and (max-width : 991px){
+    .header-container{
+        padding: 0px 40px 0px 40px;
+        height: 52px
+    }
+
+    .brand{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .brand img{
+        height: 30px;
+    }
+    .links{
+        display: none;
+    }
+}
+
+
+
+/* ============= PHONE ================= */
+@media only screen and (max-width : 767px){
+
 }
