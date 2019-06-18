@@ -153,6 +153,15 @@ body{
     text-align: center;
 }
 
+.icon{
+    color: white;
+    /* height: 20px;
+    width: 20px */
+}
+.icon-container{
+    display: none;
+}
+
 
 
 /* ============== TABLET ============== */
@@ -174,6 +183,32 @@ body{
     .links{
         display: none;
     }
+    .icon{
+        color: white;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        
+    }
+    .icon-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .jumbotron-image{
+        display: none;
+    }
+
+    .jumbotron-container{
+        margin-top: 52px;
+        padding-left: 0px;
+    }
+    .jumbotron-items{
+        margin-top: 130px;
+        margin-left: 40px;    
+    }
+
 }
 
 
@@ -182,3 +217,4 @@ body{
 @media only screen and (max-width : 767px){
 
 }
+
