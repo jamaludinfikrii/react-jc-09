@@ -19,12 +19,29 @@
 // // class Hewan extends MakhukHidup
 
 
-var arr = [
-    {nama : 'fikri'}
-]
+// var arr = [
+//     {nama : 'fikri'}
+// ]
 
-var arr2 = [
-    {nama : 'Seto'}
-]
+// var arr2 = [
+//     {nama : 'Seto'}
+// ]
 
-console.log(arr.concat(arr2))
+// console.log(arr.concat(arr2))
+
+
+
+
+var arr = []
+
+var hasil = arr.map((data, bebas) => {
+    console.log('jalan')
+    return bebas + data
+})
+//hasil = [1, 3, 5,7,14]
+
+console.log(hasil)
+// 7 & 23 & 5
+
+
+
