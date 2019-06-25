@@ -1,4 +1,5 @@
 import React from 'react';
+import Manusia from './components/object'
 // import logo from './logo.svg';
 // import Terserah from './components/button'
 // import {Button , InputComp} from './components/button'
@@ -8,6 +9,20 @@ import React from 'react';
 
 // let buah = ['Apel' , 'Mangga']
 
+import Todo from './todo'
+import Daftar from './components/daftarPage'
+import Header from './components/header'
+import { Route , Link } from 'react-router-dom'
+
+
+function Home () {
+  return(
+    <div>
+      <h1> Ini Home {Manusia.nama} {Manusia.iniFunction()}  </h1>
+      <Link to='/a'><input type='button' value='pindah ke halaman todo'/></Link>
+    </div>
+  )
+}
 
 
 class App extends React.Component{
@@ -47,22 +62,11 @@ class App extends React.Component{
   render(){
     console.log('Ini Render')
     return (
-
       <div>
-        <h1>{this.state.todo[0]}</h1>
-        <input type='text' placeholder='Masukan Todo' ref='a' />
-        <input type='button' value='Add' onClick={this.onBtnAddClick} />
-
-        {/* <h1>Hello World </h1>
-        <Button/>
-        <InputComp/>
-        <ClassComp a={buah}/>
-        {this.props.nama}
-        <Bebas>
-          Ini Children
-        </Bebas> */}
-
-        
+        <Header/>
+        <Route path='/a' component={Todo} />
+        <Route path='/daftar' component={Daftar} />
+        <Route path='/' component={Home} exact />
       </div>
     );
   }

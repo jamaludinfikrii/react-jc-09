@@ -1,12 +1,13 @@
-import React from 'react'
+import React,{Component} from 'react'
 import { Table  } from 'reactstrap'
     // COMPONENT
     // EXPORT IMPORT
     // PROPS
     // STATE
     // LIFECYCLE
+    // REACT-ROUTER-DOM
 
-class Todo extends React.Component{
+class Todo extends Component{
     state = {
         data : [],
         selectedEdit : null
