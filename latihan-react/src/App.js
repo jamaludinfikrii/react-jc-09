@@ -13,6 +13,7 @@ import Todo from './todo'
 import Daftar from './components/daftarPage'
 import Header from './components/header'
 import { Route , Link } from 'react-router-dom'
+import Count from './components/count';
 
 
 function Home () {
@@ -66,6 +67,7 @@ class App extends React.Component{
         <Header/>
         <Route path='/a' component={Todo} />
         <Route path='/daftar' component={Daftar} />
+        <Route path='/redux' component={Count} />
         <Route path='/' component={Home} exact />
       </div>
     );

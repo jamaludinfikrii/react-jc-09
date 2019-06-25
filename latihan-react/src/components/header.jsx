@@ -12,8 +12,9 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
 
-export default class Example extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
 
@@ -38,12 +39,15 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
+                  <NavLink> {this.props.count} </NavLink>
+              </NavItem>
+              <NavItem>
                 <Link to='/a' style={{textDecoration : 'none'}} > 
                     <NavLink>Todo</NavLink> 
                 </Link>
               </NavItem>
               <NavItem>
-                <NavLink >Redux</NavLink>
+                <Link to='/redux'> <NavLink >Redux</NavLink> </Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -69,3 +73,11 @@ export default class Example extends React.Component {
     );
   }
 }
+
+const mapStateToProps =(state) => {
+    return{
+        count : state.bebas.count
+    }
+}
+
+export default connect(mapStateToProps)(Header);
