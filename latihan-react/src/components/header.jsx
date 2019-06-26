@@ -42,6 +42,11 @@ class Header extends React.Component {
                   <NavLink> {this.props.count} </NavLink>
               </NavItem>
               <NavItem>
+                  <Link to='/count'> 
+                    <NavLink> {this.props.word} CountWord </NavLink> 
+                  </Link>
+              </NavItem>
+              <NavItem>
                 <Link to='/a' style={{textDecoration : 'none'}} > 
                     <NavLink>Todo</NavLink> 
                 </Link>
@@ -76,7 +81,8 @@ class Header extends React.Component {
 
 const mapStateToProps =(state) => {
     return{
-        count : state.bebas.count
+        count : state.bebas.count,
+        word : state.word.count
     }
 }
 

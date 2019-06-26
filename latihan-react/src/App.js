@@ -6,7 +6,7 @@ import Manusia from './components/object'
 // import ClassComp from './components/latihan'
 // import './App.css';
 // import Bebas from './components/childrenProps'
-
+import CountWord from './components/countWords'
 // let buah = ['Apel' , 'Mangga']
 
 import Todo from './todo'
@@ -69,6 +69,7 @@ class App extends React.Component{
         <Route path='/daftar' component={Daftar} />
         <Route path='/redux' component={Count} />
         <Route path='/' component={Home} exact />
+        <Route path='/count' component={CountWord} />
       </div>
     );
   }
