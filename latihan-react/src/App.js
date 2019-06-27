@@ -7,6 +7,7 @@ import Manusia from './components/object'
 // import './App.css';
 // import Bebas from './components/childrenProps'
 import CountWord from './components/countWords'
+import Wilayah from './components/apiWilayah'
 // let buah = ['Apel' , 'Mangga']
 
 import Todo from './todo'
@@ -70,6 +71,7 @@ class App extends React.Component{
         <Route path='/redux' component={Count} />
         <Route path='/' component={Home} exact />
         <Route path='/count' component={CountWord} />
+        <Route path='/wilayah' component={Wilayah} />
       </div>
     );
   }
