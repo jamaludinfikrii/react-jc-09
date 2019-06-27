@@ -33,13 +33,15 @@ class Wilayah extends Component {
 
     handleOnClickKabupaten = () => {
         var id = this.refs.provinsi.refs.provinsiInner.value
-        Axios.get(url + '/kabupaten?idpropinsi=' + id)
-        .then((res) => {
-            this.setState({kabupaten : res.data.data , loadingKabupaten : false})
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+        if(id > 0){
+            Axios.get(url + '/kabupaten?idpropinsi=' + id)
+            .then((res) => {
+                this.setState({kabupaten : res.data.data , loadingKabupaten : false})
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        }
     }
 
     renderDataKabupaten = () => {
@@ -71,7 +73,7 @@ class Wilayah extends Component {
                 <div className='row justify-content-center'>
                     <div className='col-md-4'>
                         <Input ref='provinsi' onChange={this.onChangeProvinsi} innerRef='provinsiInner' type='select' >
-                            <option>Pilih Provinsi</option>
+                            <option value={0}>Pilih Provinsi</option>
                             {this.renderDataProvinsi()}
                         </Input>
                     </div>
